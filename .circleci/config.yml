@@ -30,7 +30,7 @@ jobs:
 
   configure_infrastructure: 
     docker:
-      - image: cimg/python:3.10
+      - image: cimg/python:alpine 3.10
     steps:
       - checkout
       - add_ssh_keys:
@@ -42,7 +42,7 @@ jobs:
             sudo apk update
             sudo apk add alpine-sdk
 
-            sudo apk add --update ansible 
+            apk add --update ansible 
       - run:
           name: Run Playbook and Configure server
           command: |
