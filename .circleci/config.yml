@@ -31,5 +31,5 @@ workflows:
   # Name the workflow
   prod2Workflow:
     jobs:
-      - myjob1
+      - build
       - create_infrastructure
