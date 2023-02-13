@@ -39,7 +39,10 @@ jobs:
           name: Install Ansible
           command: |
             # install the dependencies needed for your playbook
-            apk add --update ansible 
+            sudo apk update
+            sudo apk add alpine-sdk
+
+            sudo apk add --update ansible 
       - run:
           name: Run Playbook and Configure server
           command: |
