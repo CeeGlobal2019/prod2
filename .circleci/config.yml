@@ -84,9 +84,9 @@ jobs:
             aws cloudformation deploy \
               --template-file cloudfront.yml \
               --stack-name production-distro \
-              --parameter-overrides PipelineID=krak12345 \ # Name of the S3 bucket you created manually.
-              --tags project=udapeople
-              --region us-west-2            
+              --parameter-overrides PipelineID=krak12345 \         #Name of the S3 bucket you created manually.
+              --tags project=udapeople \
+#              --region us-west-2            
 
 
 # Sequential workflow
